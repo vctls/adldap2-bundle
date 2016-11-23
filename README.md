@@ -1,17 +1,26 @@
 # Adldap2 Integration for Symfony
 
 This bundle helps you to use [adldap2](https://github.com/Adldap2/Adldap2) library with Symfony.
+This personal fork is not packaged (yet). I've changed a few things to make it work with adldap2 v6.1.
 
 ## Installation
 
 ### Step 1: Download the Bundle
 
-Install the library via [Composer](https://getcomposer.org/) by
-running the following command:
+Add this to your composer.json
 
-```bash
-composer require sgomez/adldap2-bundle
+```json
+"repositories": [
+  {
+    "type": "git",
+    "url": "https://github.com/vtoulouse/adldap2-bundle.git"
+  }
+],
+"require": {
+    "sgomez/adldap2-bundle": "dev-master"
+},
 ```
+then run `composer update`.
 
 ### Step 2: Enable the Bundle
 
@@ -34,25 +43,25 @@ public function registerBundles()
 ### Step 3: Configure the bundle
 
 You need to configure your connection. The parameters are the same that use
- [Adldap2](https://github.com/Adldap2/Adldap2/blob/v5.2/docs/CONFIGURATION.md).
+ [Adldap2](https://github.com/Adldap2/Adldap2/blob/v6.1/docs/CONFIGURATION.md).
  
 This is a sample configuration that you need to add in the `app/config/config.yml` file:
 
 ```yaml
 adldap2:
-    auto_connect: true
-    connection_class: Adldap\Connections\Ldap
     connection_settings:
         domain_controllers: ["domain_controller_1", "domain_controller_2"]
         base_dn: "dc=domain,dc=com"
         admin_username: "username"
         admin_password: "password"
+        admin_account_suffix: ""
         account_suffix: "domain.com"
+        account_prefix: ""
         port: 389
         follow_referrals: false
         use_ssl: false
         use_tls: false
-        use_sso: false
+        timeout: 5
 
 ```
 
@@ -60,7 +69,7 @@ You don't need to configure all values. See the original adldap2 documentation f
 
 ### Step 4: Profit!
 
-A new service called 'adldap2' has been created. It's a configured instance of [Adldap](https://github.com/Adldap2/Adldap2/blob/v5.2/src/Adldap.php)
+A new service called 'adldap2' has been created. It's a configured instance of [Adldap](https://github.com/Adldap2/Adldap2/blob/v6.1/src/Adldap.php)
  class. You can use it as usual:
  
 ```yaml
@@ -69,7 +78,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $user = $this->get('adldap2')->search()->find('username');
+        $user = $this->get('adldap2')->getDefaultProvider()->search()->users()->find('username');
     }
 }
 ```
