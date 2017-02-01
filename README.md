@@ -13,7 +13,7 @@ Add this to your composer.json
 "repositories": [
   {
     "type": "git",
-    "url": "https://github.com/vtoulouse/adldap2-bundle.git"
+    "url": "https://github.com/vctls/adldap2-bundle.git"
   }
 ],
 "require": {
