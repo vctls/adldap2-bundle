@@ -1,13 +1,9 @@
 {
     "name": "vctls/adldap2-bundle",
     "description": "Symfony Bundle for adldap2 library.",
-    "type": "library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Sergio Gómez",
-            "email": "sergio@uco.es"
-        },
         {
             "name": "Victor Toulouse",
             "email": "victor.toulouse@insa-toulouse.fr"
@@ -15,7 +11,7 @@
 
     ],
     "autoload": {
-        "psr-4": { "Sgomez\\Bundle\\Adldap2Bundle\\": "" }
+        "psr-4": { "Vctls\\Adldap2Bundle\\": "" }
     },
     "repositories": [
         {
