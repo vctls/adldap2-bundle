@@ -7,7 +7,12 @@
         {
             "name": "Sergio Gómez",
             "email": "sergio@uco.es"
+        },
+        {
+            "name": "Victor Toulouse",
+            "email": "victor.toulouse@insa-toulouse.fr"
         }
+
     ],
     "autoload": {
         "psr-4": { "Sgomez\\Bundle\\Adldap2Bundle\\": "" }
