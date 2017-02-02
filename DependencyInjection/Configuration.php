@@ -1,6 +1,6 @@
 <?php
 
-namespace Sgomez\Bundle\Adldap2Bundle\DependencyInjection;
+namespace Vctls\Adldap2Bundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Sgomez\Bundle\Adldap2Bundle;
+namespace Vctls\Adldap2Bundle;
 
-use Sgomez\Bundle\Adldap2Bundle\DependencyInjection\Adldap2Extension;
+use Vctls\Adldap2Bundle\DependencyInjection\Adldap2Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class Adldap2Bundle extends Bundle

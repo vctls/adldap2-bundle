@@ -1,6 +1,5 @@
 <?php
-
-namespace Sgomez\Bundle\Adldap2Bundle\DependencyInjection;
+namespace Vctls\Adldap2Bundle\DependencyInjection;
 
 use Adldap\Adldap;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
