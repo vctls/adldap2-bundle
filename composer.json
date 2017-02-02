@@ -1,5 +1,5 @@
 {
-    "name": "sgomez/adldap2-bundle",
+    "name": "vctls/adldap2-bundle",
     "description": "Symfony Bundle for adldap2 library.",
     "type": "library",
     "license": "MIT",
