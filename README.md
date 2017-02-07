@@ -1,7 +1,7 @@
 # Adldap2 Integration for Symfony
 
 This bundle helps you to use [adldap2](https://github.com/Adldap2/Adldap2) library with Symfony.
-This personal fork is not packaged (yet). I've changed a few things to make it work with adldap2 v6.1.
+This personal fork is not packaged. I've changed a few things to make it work with adldap2 v6.1.
 
 ## Installation
 
@@ -10,15 +10,17 @@ This personal fork is not packaged (yet). I've changed a few things to make it w
 Add this to your composer.json
 
 ```json
-"repositories": [
-  {
-    "type": "git",
-    "url": "https://github.com/vctls/adldap2-bundle.git"
-  }
-],
-"require": {
-    "sgomez/adldap2-bundle": "dev-master"
-},
+{
+    "repositories": [
+        {
+        "type": "git",
+        "url": "https://github.com/vctls/adldap2-bundle.git"
+        }
+    ],
+    "require": {
+        "vctls/adldap2-bundle": "dev-master"
+    }
+}
 ```
 then run `composer update`.
 
@@ -29,12 +31,12 @@ Next, enable the bundle in your `app/AppKernel.php` file:
 ```php
 <?php
 // app/AppKernel.php
-
+//...
 public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Sgomez\Bundle\Adldap2Bundle\Adldap2Bundle(),
+        new Vctls\Adldap2Bundle\Adldap2Bundle(),
         // ...
     );
 }
