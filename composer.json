@@ -8,7 +8,6 @@
             "name": "Victor Toulouse",
             "email": "victor.toulouse@insa-toulouse.fr"
         }
-
     ],
     "autoload": {
         "psr-4": { "Vctls\\Adldap2Bundle\\": "" }
